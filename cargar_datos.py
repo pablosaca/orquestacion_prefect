@@ -1,4 +1,6 @@
 import os
+
+import pandas as pd
 from prefect import flow, task, get_run_logger
 from prefect.artifacts import create_table_artifact
 from src.utils import (
@@ -21,7 +23,7 @@ def get_data_from_ine_api(path_json: str):
 
 
 @task(description="visualizar datos", tags=["report_data"])
-def report_prev_year_table(data):
+def report_prev_year_table(data: pd.DataFrame):
     """
     Presentar los datos como artefacto - formato tabla
     """
@@ -33,7 +35,7 @@ def report_prev_year_table(data):
 
 
 @task(description="escribir datos ine", tags=["save_data"])
-def write_csv(data):
+def write_csv(data: pd.DataFrame):
     """
     Escribir los datos
     """
