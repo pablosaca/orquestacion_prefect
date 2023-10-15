@@ -1,0 +1,11 @@
+{
+  "DATA": {
+    "path": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE",
+    "code": "IPC251855"
+  },
+  "MODEL": {
+  "regular": [2, 1, 2],
+  "seasonal": [1, 0, 0, 12],
+  "horizon": 6
+  }
+}
