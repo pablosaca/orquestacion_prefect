@@ -23,7 +23,7 @@ cargar_datos.py
 ```
 
 ```
-prefect deployment run 'INE Datos/estudios_ipc'
+prefect deployment run 'INE Datos/estudio_ipc'
 ```
 
 **Uso de ARIMA para modelizar la serie de tiempo**
